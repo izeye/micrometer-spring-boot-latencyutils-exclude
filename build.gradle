@@ -1,0 +1,14 @@
+plugins {
+    id 'java'
+    id "org.springframework.boot" version "2.7.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation('io.micrometer:micrometer-core:1.9.2') {
+        exclude module: 'LatencyUtils'
+    }
+}
